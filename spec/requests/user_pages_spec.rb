@@ -46,7 +46,7 @@ describe "User pages" do
             click_link('delete', match: :first)
           end.to change(User, :count).by(-1)
         end
-        it { should_not have_link('delete', href: userpath(admin)) }
+        it { should_not have_link('delete', href: user_path(admin)) }
       end
 
     end
